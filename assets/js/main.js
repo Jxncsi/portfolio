@@ -1,31 +1,47 @@
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close');
+    navClose = document.getElementById('nav-close')
 
-if (navToggle){
-    navToggle.addEventListener('click', ()=>{
+if(navToggle){
+    navToggle.addEventListener('click',()=>{
         navMenu.classList.add('show-menu')
     })
 }
 
-/*=============== REMOVE MENU MOBILE ===============*/
-if (navClose){
-    navClose.addEventListener('click', ()=>{
+if(navClose){
+    navClose.addEventListener('click',()=>{
         navMenu.classList.remove('show-menu')
     })
 }
 
-/*=============== HOME TYPED JS ===============*/
-const navLink = document.querySelectorAll('.nav__link')
+/*=============== REMOVE MENU MOBILE ===============*/
+const navLink= document.querySelectorAll('.nav__link')
 
-const LinkAction = ()=>{
+const Linkaction = ()=>{
     const navMenu = document.getElementById('nav-menu')
     navMenu.classList.remove('show-menu')
 }
-navLink.forEach(n => n.addEventListener('click', LinkAction))
-/*=============== ADD SHADOW HEADER ===============*/
+navLink.forEach(n=> n.addEventListener('click', Linkaction))
 
+/*=============== HOME TYPED JS ===============*/
+ var typed = new Typed('#home-subtitle', {
+      strings: ['Developer', 'Webdesigner', 'Fronted Manager', 'Freelancer'],
+      typeSpeed: 50,
+      loop:true,
+      backSpeed:40,
+      backDelay:2000,
+      cursorChar:'_'
+    });
+
+/*=============== ADD SHADOW HEADER ===============*/
+const shadowHeader= ()=>{
+    const header = document.getElementById('header')
+    this.scrollY>50 ? header.classList.add('shadow-header'):
+    header.classList.remove('shadow-header')
+}
+
+window.addEventListener('scroll', shadowHeader)
 
 /*=============== CONTACT EMAIL JS ===============*/ 
 
