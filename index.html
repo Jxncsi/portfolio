@@ -1,242 +1,197 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="hu">
 
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saját Portfólió | Fejlesztő</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
-
-      <title>Responsive portfolio website</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         <nav class="nav container">
-            <a href="" class="nav__logo">MJL</a>
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li>
-                     <a href="#home" class="nav__link">Home</a>
-                  </li>
-                  <li>
-                     <a href="#about" class="nav__link">About</a>
-                  </li>
-                  <li>
-                     <a href="#projects" class="nav__link">Projects</a>
-                  </li>
-                  <li>
-                     <a href="#resume" class="nav__link">Resume</a>
-                  </li>
-                  <li>
-                     <a href="#contact" class="nav__link">Contact</a>
-                  </li>
-               </ul>
-               <div id="nav-close" class="nav__close">
-                  <i class="ri-close-line"></i>
-               </div>
+<body class="light-mode">
+    <header id="header">
+        <nav class="container">
+            <a href="#kezdolap" class="logo">MJL</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#kezdolap">Kezdőlap</a></li>
+                <li><a href="#munkaim">Munkáim</a></li>
+                <li><a href="#keszsegek">Készségek</a></li>
+                <li><a href="#kapcsolat">Kapcsolat</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Világos mód váltó"><i class="fas fa-moon"></i></button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-            <div class="nav__toggle" id="nav-toggle">
-               <i class="ri-menu-line"></i>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="kezdolap" class="hero-section">
+            <div class="hero-decorations">
+                <div class="hero-grid"></div>
+                <div class="hero-monogram">MJL</div>
             </div>
-         </nav>
-      </header>
-
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!--==================== HOME ====================-->
-         <section class="home section" id="home">
-            <div class="home__container container grid">
-               <div class="home__content">
-                  <div class="home__image">
-                     <img src="assets/img/home-perfil.png" alt="image" class="home__img">
-                  </div>
-                  <div class="home__social">
-                     <a class="home__link" target="_blank" href="https://www.linkedin.com/">
-                        <i class="ri-linkedin-box-fill"></i>
-                     </a>
-                      <a class="home__link" target="_blank" href="https://github.com/">
-                        <i class="ri-github-fill"></i>
-                     </a>
-                      <a class="home__link" target="_blank" href="https://dribbble.com/">
-                        <i class="ri-dribbble-line"></i>
-                     </a>
-                  </div>
-               </div>
-               <div class="home__data grid">
-                  <p class="home__subtitle">
-                     Hi, I'm a <span id="home-subtitle"></span>
-                  </p>
-                  <h1 class="home__title">Lőrintz Levente</h1>
-                  <p class="home__description">
-                  Web developer and designer based in Lima, Peru, specializing 
-                  in creating websites for businesses. See my portfolio, which 
-                  includes modern websites, designs, and more.
-                  </p>
-                  <div class="home__buttons">
-                     <a class="button" href="assets/pdf/Kai-Cv.pdf">Download</a>
-                     <a class="button button__ghost" href="">Projects</a>
-                  </div>
-               </div>
+            <div class="container hero-content">
+                <div class="hero-text-wrapper reveal">
+                    <span class="hero-greeting">Üdvözöllek a portfóliómon</span>
+                    <h1 class="hero-title">Molnár <br><span class="accent">János Levente</span></h1>
+                    <div class="hero-btns-wrapper">
+                        <a href="#munkaim" class="btn primary">Munkáim megtekintése</a>
+                        <a href="#kapcsolat" class="btn secondary">Kapcsolatfelvétel</a>
+                    </div>
+                </div>
             </div>
-         </section>
+        </section>
 
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
-            <div class="about__container container grid">
-               <div class="about__content">
-                  <div class="about__data">
-                     <h2 class="section__title">About me</h2>
-                     <p class="about__description">
-                        I am a web developer and designer specializing in creating 
-                        modern, functional, and visually appealing websites. I combine 
-                        creativity and functionality to transform ideas into intuitive 
-                        interfaces, balancing design, usability, and quality code.
-                     </p>
-                     <a href="" class="button button__ghost">Contact me</a>
-                  </div>
-                  <div class="about__skills">
-                     <h3 class="about__subtitle">
-                        <i class="ri-bookmark-fill"></i>
-                        <span>Skills</span>
-                     </h3>
-                     <ul class="about__items">
-                        <li class="about__item">HTML</li>
-                        <li class="about__item">CSS</li>
-                        <li class="about__item">JavaScript</li>
-                        <li class="about__item">React</li>
-                        <li class="about__item">Astro</li>
-                        <li class="about__item">NextJS</li>
-                        <li class="about__item">Laravel</li>
-                        <li class="about__item">Git</li>
-                        <li class="about__item">GitHub</li>
-                        <li class="about__item">Figma</li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="about__image">
-                  <img src="assets/img/about-perfil.png" alt="image" class="about__img">
-               </div>
+        <!-- Munkáim Section -->
+        <section id="munkaim" class="projects-section">
+            <div class="container">
+                <h2 class="section-title reveal">Legutóbbi Munkáim</h2>
+                <div class="project-grid">
+                    <!-- Munka 1 -->
+                    <div class="project-card reveal">
+                        <div class="card-body">
+                            <h3>Dusza V2</h3>
+                            <p>Komplex WPF alapú szoftvermegoldás a Dusza Árpád Programozói Emlékversenyre.
+                                Feladatorientált architektúra, modern UI és hatékony adatszerkezetek.</p>
+                            <div class="tags">
+                                <span>C#</span>
+                                <span>WPF</span>
+                                <span>.NET</span>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://github.com/ABEL0206/DuszaVerseny2025_2.fordulo" target="_blank"
+                                    class="btn primary">GitHub Repository <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Munka 2 -->
+                    <div class="project-card reveal">
+                        <div class="card-body">
+                            <h3>IKT Játék</h3>
+                            <p>Godot engine-nel készült interaktív RPG játék, ahol a C# szkriptek biztosítják a
+                                zökkenőmentes játékmenetet és a logikai precizitást.</p>
+                            <div class="tags">
+                                <span>Godot</span>
+                                <span>C#</span>
+                                <span>.NET</span>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://github.com/ABEL0206/ikt-jatek" target="_blank"
+                                    class="btn primary">GitHub Repository <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Munka 3 -->
+                    <div class="project-card reveal">
+                        <div class="card-body">
+                            <h3>Autókölcsönző</h3>
+                            <p>Stílusos és reszponzív webes felület gépjármű-kölcsönzési szolgáltatásokhoz, modern HTML5
+                                és CSS3 megoldásokkal.</p>
+                            <div class="tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://github.com/Jxncsi/autokolcsonzes" target="_blank"
+                                    class="btn primary">GitHub Repository <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </section>
+        </section>
 
-         <!--==================== PROJECTS ====================-->
-         <section class="projects section" id="projects">
-            <h2 class="section__title">Projects</h2>
-            <div class="projects__container container grid">
-               
-               <article class="project__card">
-                  <img src="assets/img/project-1.png" alt="" class="projects__img">
-                  <div class="projects__data">
-                     <h1 class="projects__title">Travel Website</h1>
-                     <p class="project__description">Creation, design and development of a website for a user.</p>
-                     <a href="#" target="_blank" class="button button__ghost">View Project</a>
-                  </div>
-               </article>
-
-               <article class="project__card">
-                  <img src="assets/img/project-2.png" alt="" class="projects__img">
-                  <div class="projects__data">
-                     <h1 class="projects__title">Gym Website</h1>
-                     <p class="project__description">Creation, design and development of a website for a user.</p>
-                     <a href="#" target="_blank" class="button button__ghost">View Project</a>
-                  </div>
-               </article>
-
-               <article class="project__card">
-                  <img src="assets/img/project-3.png" alt="" class="projects__img">
-                  <div class="projects__data">
-                     <h1 class="projects__title">Coffee Website</h1>
-                     <p class="project__description">Creation, design and development of a website for a user.</p>
-                     <a href="#" target="_blank" class="button button__ghost">View Project</a>
-                  </div>
-               </article>
-
-               <article class="project__card">
-                  <img src="assets/img/project-4.png" alt="" class="projects__img">
-                  <div class="projects__data">
-                     <h1 class="projects__title">Business Design</h1>
-                     <p class="project__description">Creation, design and development of a website for a user.</p>
-                     <a href="#" target="_blank" class="button button__ghost">View Project</a>
-                  </div>
-               </article>
-
-               <article class="project__card">
-                  <img src="assets/img/project-5.png" alt="" class="projects__img">
-                  <div class="projects__data">
-                     <h1 class="projects__title">Food Design</h1>
-                     <p class="project__description">Creation, design and development of a website for a user.</p>
-                     <a href="#" target="_blank" class="button button__ghost">View Project</a>
-                  </div>
-               </article>
-
-               <article class="project__card">
-                  <img src="assets/img/project-6.png" alt="" class="projects__img">
-                  <div class="projects__data">
-                     <h1 class="projects__title">IA Website & Design</h1>
-                     <p class="project__description">Creation, design and development of a website for a user.</p>
-                     <a href="#" target="_blank" class="button button__ghost">View Project</a>
-                  </div>
-               </article>
-
-
+        <!-- Skills Section -->
+        <section id="keszsegek" class="skills-section">
+            <div class="container">
+                <h2 class="section-title reveal">Készségek & Technológiák</h2>
+                <div class="skills-badges">
+                    <div class="skill-badge reveal">
+                        <i class="fab fa-html5 html"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-badge reveal">
+                        <i class="fab fa-css3-alt css"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-badge reveal">
+                        <i class="fab fa-js js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-badge reveal">
+                        <i class="fas fa-code csharp"></i>
+                        <span>C#</span>
+                    </div>
+                    <div class="skill-badge reveal">
+                        <i class="fab fa-python python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-badge reveal">
+                        <i class="fas fa-moon lua"></i>
+                        <span>Lua</span>
+                    </div>
+                    <div class="skill-badge reveal">
+                        <i class="fas fa-database sql"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-badge reveal">
+                        <i class="fab fa-git-alt git"></i>
+                        <span>Git</span>
+                    </div>
+                </div>
             </div>
-         </section>
+        </section>
 
-         <!--==================== RESUME ====================-->
-         <section class="resume section" id="resume">
-            
-         </section>
+        <!-- Contact Section -->
+        <section id="kapcsolat" class="contact-section">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <h2 class="section-title">Keress bizalommal!</h2>
+                    <p class="contact-text">Nyitott vagyok új lehetőségekre és szakmai együttműködésekre.</p>
 
-         <!--==================== CONTACT ====================-->
-         <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <div class="contact__container container grid">
-               <form action="" class="contact__form grid" id="contact-form">
-                  <div class="contact__content grid">
-                     <input placeholder="Name" type="text" name="user_name" class="contact__input">
-                     <input placeholder="Email" type="email" name="user_email" class="contact__input">
-                     <textarea placeholder="Write your message here..." name="user_message" class="contact__input contact__area"></textarea>
-                     <button type="submit" class="button">Send message</button>
-                     <p class="contact__message" id="contact-message"></p>
-                  </div>
-                  <div class="contact__content grid">
-                     <div class="contact__data grid">
+                    <div class="contact-socials">
+                        <a href="https://github.com/Jxncsi" target="_blank" class="social-btn" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=janos.molnar828@gmail.com"
+                            target="_blank" class="social-btn" title="Email küldése">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
 
-                     </div>
-                     <div class="contact__social">
-                        
-                     </div>
-                  </div>
-               </form>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Üzenet</label>
+                            <textarea id="message" rows="4" placeholder="Írd ide az üzeneted..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary full">Üzenet küldése <i
+                                class="fas fa-paper-plane"></i></button>
+                        <div id="form-feedback" class="form-feedback"></div>
+                    </form>
+                </div>
             </div>
-         </section>
-      </main>
+        </section>
+    </main>
 
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         
-      </footer>
+    <footer>
+        <div class="container footer-wrapper">
+            <p class="copyright">&copy; 2026 Minden jog fenntartva</p>
+            <p class="credits">Készítette: <span class="footer-accent">Molnár János Levente</span></p>
+        </div>
+    </footer>
 
-      <!--========== SCROLL UP ==========-->
-      
+    <script src="script.js"></script>
+</body>
 
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
-
-      <!--=============== TYPED JS ===============-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
-
-      <!--=============== EMAIL JS ===============-->
-      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
 </html>
