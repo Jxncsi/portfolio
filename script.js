@@ -15,12 +15,20 @@ if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
+
+        // Görgetés tiltása/engedélyezése a menü állapota alapján
+        if (navLinks.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
     });
 
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Görgetés visszaállítása
         });
     });
 }
@@ -87,14 +95,9 @@ if (contactForm) {
         let message = document.getElementById('message').value;
 
         if (message) {
-            let subject = encodeURIComponent(`Üzenet a portfólióról`);
-            let bodyContent = encodeURIComponent(message);
-            let gmailLink = `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=janos.molnar828@gmail.com&su=${subject}&body=${bodyContent}`;
-
-            window.open(gmailLink, '_blank');
-
+            // Email küldés nincs implementálva, csak demó
             if (formFeedback) {
-                formFeedback.innerText = `A Gmail megnyitása a levél elküldéséhez...`;
+                formFeedback.innerText = `Üzenet elküldve!`;
                 formFeedback.classList.add('success');
             }
 
@@ -106,6 +109,32 @@ if (contactForm) {
                     formFeedback.innerText = '';
                 }
             }, 5000);
+        }
+    });
+}
+
+// --- 5. FORRÁSOK MODAL KEZELÉSE ---
+let sourcesLink = document.getElementById('sources-link');
+let sourcesModal = document.getElementById('sources-modal');
+let closeModal = document.querySelector('.close-modal');
+
+if (sourcesLink && sourcesModal && closeModal) {
+    sourcesLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        sourcesModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Görgetés letiltása
+    });
+
+    closeModal.addEventListener('click', () => {
+        sourcesModal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Görgetés újraengedélyezése
+    });
+
+    // Bezárás a modalon kívülre kattintva
+    window.addEventListener('click', (e) => {
+        if (e.target === sourcesModal) {
+            sourcesModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
         }
     });
 }
