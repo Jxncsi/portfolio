@@ -858,11 +858,9 @@ footer {
         transform: translateX(-50%);
         top: -130vh;
         width: 90%;
-        /* Pontosan a navbar szélessége */
         max-width: 950px;
         height: auto;
         border-radius: 35px;
-        /* Harmonizál a navbar lekerekítésével */
         background: var(--nav-bg);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -870,7 +868,6 @@ footer {
         align-items: center;
         gap: 1.5rem;
         z-index: 998;
-        /* A navbar (999) mögé kerül */
         transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         padding: 3.5rem 0 2rem;
@@ -879,7 +876,6 @@ footer {
 
     .nav-links.active {
         top: 50px;
-        /* Alacsonyabbra helyezve a navbartól */
     }
 
     .hero-content h1 {
