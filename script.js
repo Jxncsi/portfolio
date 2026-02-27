@@ -112,29 +112,3 @@ if (contactForm) {
         }
     });
 }
-
-// --- 5. FORRÁSOK MODAL KEZELÉSE ---
-let sourcesLink = document.getElementById('sources-link');
-let sourcesModal = document.getElementById('sources-modal');
-let closeModal = document.querySelector('.close-modal');
-
-if (sourcesLink && sourcesModal && closeModal) {
-    sourcesLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        sourcesModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
-
-    closeModal.addEventListener('click', () => {
-        sourcesModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    });
-
-    // Bezárás a modalon kívülre kattintva
-    window.addEventListener('click', (e) => {
-        if (e.target === sourcesModal) {
-            sourcesModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    });
-}
