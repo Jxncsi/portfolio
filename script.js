@@ -67,7 +67,7 @@ if (themeToggle) {
 let revealElements = document.querySelectorAll('.reveal');
 
 if (revealElements.length > 0) {
-    let revealCallback = (entries, observer) => {
+    let revealCallback = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
@@ -122,12 +122,12 @@ if (sourcesLink && sourcesModal && closeModal) {
     sourcesLink.addEventListener('click', (e) => {
         e.preventDefault();
         sourcesModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Görgetés letiltása
+        document.body.style.overflow = 'hidden';
     });
 
     closeModal.addEventListener('click', () => {
         sourcesModal.classList.remove('active');
-        document.body.style.overflow = 'auto'; // Görgetés újraengedélyezése
+        document.body.style.overflow = 'auto';
     });
 
     // Bezárás a modalon kívülre kattintva
